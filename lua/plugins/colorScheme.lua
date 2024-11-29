@@ -23,4 +23,7 @@ return {
   {
     "scottmckendry/cyberdream.nvim"
   },
+  {
+    "navarasu/onedark.nvim"
+  },
 }
