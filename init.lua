@@ -16,4 +16,12 @@ require("vim-keymap")
 require("vim-commands")
 require("lazy").setup("plugins")
 
+require "telescope".setup {
+  pickers = {
+    colorscheme = {
+      enable_preview = true
+    }
+  }
+}
 
+-- vim.cmd.colorscheme "cyberpunk"
