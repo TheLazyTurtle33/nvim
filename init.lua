@@ -24,4 +24,4 @@ require "telescope".setup {
   }
 }
 
--- vim.cmd.colorscheme "cyberpunk"
+vim.cmd.colorscheme "tokyonight-night"
