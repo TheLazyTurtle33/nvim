@@ -19,29 +19,26 @@ return {
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-      local lspconfig = require("lspconfig")
-      lspconfig.html.setup({
+      vim.lsp.config('html',{
         capabilities = capabilities
       })
-      lspconfig.lua_ls.setup({
+      vim.lsp.config('lua_ls',{
         capabilities = capabilities
       })
-      lspconfig.zls.setup({
+      vim.lsp.config('zls',{
         capabilities = capabilities
       })
-      lspconfig.pylsp.setup({
+      vim.lsp.config('pylsp',{
         capabilities = capabilities
       })
-      lspconfig.hyprls.setup({
-        capabilities = capabilities
-      })
-      lspconfig.cssls.setup({
+      vim.lsp.config('hyprls',{
         capabilities = capabilities
       })
 
-      lspconfig.matlab_ls.setup({
-        capabilities = capabilities
-      })
+			vim.lsp.config('gopls', {
+				capabilities = capabilities
+			})
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})

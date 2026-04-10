@@ -11,17 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("vim-options")
-require("vim-keymap")
-require("vim-commands")
+
+require("options")
+
+
 require("lazy").setup("plugins")
 
-require "telescope".setup {
-  pickers = {
-    colorscheme = {
-      enable_preview = true
-    }
-  }
-}
 
-vim.cmd.colorscheme "tokyonight-night"
+require("key-map")
+
